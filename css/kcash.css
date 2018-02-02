@@ -1,0 +1,39 @@
+ion-content {
+  background: #eee;
+}
+ion-header-bar .header_left {
+  padding: 10px;
+  font-size: 20px;
+}
+ion-header-bar .header_right {
+  padding: 10px;
+  font-size: 20px;
+  right: 0px;
+}
+.price {
+  float: right;
+}
+.addAsset {
+  font-size: 20px;
+  color: #e6b500;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  border: 1px dashed #cccccc;
+  margin: 20px;
+}
+.cent img:first-child {
+  margin: 30px ;
+}
+.btn {
+  margin: 80px;
+}
+.btn button {
+  margin: 20px;
+}
+.btn .btn1 {
+  float: left;
+}
+.btn .btn2 {
+  float: right;
+}

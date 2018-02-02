@@ -2,17 +2,22 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>导出密钥列表</title>
+    <title>密钥信息详情</title>
 </head>
 <body>
-<div class="header">导出密钥</div>
-<ul>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-</ul>
+<div class="header"><p class="keyName"></p>密钥</div>
+<div class="container">
+    <div>
+        <p>注意!</p>
+        <div>拥有私钥就能完全控制该地址的资产,不要分享给任何人</div>
+    </div>
+    <div>以下是 <p class="keyName">BTC</p>的地址和密钥,点击可复制</div>
+    <ul class="keyinfo">
+        <li><p>地址</p><div class="add">112g3hj12g31hj12ghj3gjh1</div></li>
+        <li><p>密钥</p><div class="key">1hjkfhjds</div></li>
+    </ul>
+</div>
+<!--点击信息复制成功后提示复制成功-->
+<div class="copySuccess">复制成功</div>
 </body>
 </html>

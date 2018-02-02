@@ -7,12 +7,16 @@
 <body>
 <div class="header">删除钱包</div>
 <div class="container">
-    <div class="text">
-        <p>注意!</p><div>删除钱包之前，请务必确认已备份好钱包助记词，否则将丢弃你的钱包资产。</div>
-    </div>
+    <div>请输入备份的钱包助记词(12个英文单词)按空格分隔</div>
     <form action="">
-        <button>知道了，继续</button>
+        <textarea name="" id="" cols="30" rows="10" placeholder="请输入备份的钱包助记词"></textarea>
+        <button>立即验证</button>
     </form>
+</div>
+<!--助记词不正确，请先备份钱包助记词，弹式框提示-->
+<div>
+    <p>助记词不正确，请先备份钱包助记词</p>
+    <button>确认</button>
 </div>
 </body>
 </html>

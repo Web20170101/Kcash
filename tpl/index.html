@@ -1,10 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
+    <title>首页</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
+<!--<div class="header">-->
+    <!--<div about="totalAssets">-->
+        <!--总资产(BRL) <p class="total">100.000</p>-->
+        <!--<div>三</div>-->
+    <!--</div>-->
+<!--</div>-->
+<ion-header-bar class="bar-dark">
 
+    <h1 class="title">总资产(BRL) <span>100.00</span></h1>
+    <button class="button icon ion-navicon" menu-toggle="left"></button>
+</ion-header-bar>
+<!--各种币资产列表-->
+<ion-content>
+    <div class="list">
+
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/1.png">
+            <span>KCASH</span>
+            <span class="price">0.0000</span>
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/2.png">
+            <span>BTC</>
+            <span class="price">0.0000</span>
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/3.png">
+            <span>ETH</>
+            <span class="price">0.0000</span>
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/4.png">
+            <span>BCH</>
+            <span class="price">0.0000</span>
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/5.png">
+            <span>LTC</>
+            <span class="price">0.0000</span>
+        </a>
+    </div>
+    <div class="addAsset"><i class="icon ion-plus-circled"></i>添加资产</div>
+</ion-content>
+<!--<ul>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+    <!--<li><img src="" alt=""/><p>KCASH</p><p class="total">0.00000</p></li>-->
+<!--</ul>-->
+
+<script>
+    var app = angular.module('myApp', ['ionic']);
+</script>
 </body>
 </html>

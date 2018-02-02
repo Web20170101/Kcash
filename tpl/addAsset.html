@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
+    <title>添加资产</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
-
+<!--<div class="header">KCASH</div>-->
+<ion-header-bar>
+    <i class="icon ion-chevron-left header_left"></i>
+    <h1 class="title">添加资产</h1>
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+        <ion-checkbox ">BTC-Bitcoin</ion-checkbox>
+        <ion-checkbox ">BTC-Bitcoin</ion-checkbox>
+        <ion-checkbox ">BTC-Bitcoin</ion-checkbox>
+        <ion-checkbox ">BTC-Bitcoin</ion-checkbox>
+    </ion-list>
+</ion-content>
+<script>
+    var app = angular.module('myApp', ['ionic']);
+</script>
 </body>
 </html>
+

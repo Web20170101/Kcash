@@ -6,25 +6,32 @@
     <link rel="stylesheet" href="../css/ionic.css"/>
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
     <link rel="stylesheet" href="../css/kcash.css"/>
-    <title>转账和收款</title>
+    <title>填写转账</title>
     <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
 <!--<div class="header">KCASH</div>-->
 <ion-header-bar>
     <i class="icon ion-chevron-left header_left"></i>
-    <h1 class="title">KCASH</h1>
+    <h1 class="title">转账</h1>
 </ion-header-bar>
 <ion-content>
-    <div class="text-center cent">
-        <img src="../imgSmall/1.png">
-        <div><span>0.0000</span>KCASH</div>
+    <div>余额: <span>100.0000</span>KCASH</div>
+    <div class="list">
+        <label class="item item-input">
+            <span class="input-label">地址</span>
+            <input type="text" placeholder="请输入收款地址">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">金额</span>
+            <input type="text" placeholder="请输入转账金额">
+        </label>
+        <label class="item item-input">
+            <span class="input-label">手续费</span>
+            <input type="password">
+        </label>
     </div>
-    <div class="btn">
-        <button class="button icon-left  button-energized ion-arrow-up-a btn1">转账</button>
-        <button class="button icon-left  button-dark ion-arrow-down-a btn2">收款</button>
-    </div>
-    <div class="detail">交易记录</div>
+    <button class="button button-dark button-block">下一步</button>
 </ion-content>
 <script>
     var app = angular.module('myApp', ['ionic']);

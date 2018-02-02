@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
+    <title>登录</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
+<!--<div ng-include="'tpl/include/header.html'"></div>-->
+<ion-header-bar>
+    <i class="icon ion-chevron-left header_left"></i>
+    <h1 class="title">登录</h1>
+</ion-header-bar>
 
+
+    <!--<form action="">-->
+        <!--<p>+86</p><input type="text"placeholder="请输入手机号码"/><a href="">获取验证码</a><p>110s</p>-->
+        <!--<input type="text" placeholder="请输入手机短信验证码"/>-->
+        <!--<button>登录</button>-->
+        <!--<p>未注册过的手机将自动创建为账号</p>-->
+    <!--</form>-->
+<ion-content>
+    <div class="item item-input-inset">
+        <label class="item-input-wrapper">
+            <span>+86</span>
+            <input type="text" placeholder="请输入手机号码">
+            <a href="">获取验证码</a>
+        </label>
+    </div>
+    <label class="item item-input">
+        <input type="text" placeholder="请输入手机短信验证码">
+    </label>
+    <button class="button button-block button-dark">
+        登录
+    </button>
+    <p>未注册过的手机将自动创建为账号</p>
+</ion-content>
+<script>
+    var app = angular.module('myApp', ['ionic']);
+</script>
 </body>
 </html>
