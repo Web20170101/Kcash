@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
+    <title>转账和收款</title>
+    <script src="../js/ionic.bundle.js"></script>
+</head>
+<body>
+<!--<div class="header">KCASH</div>-->
+<ion-header-bar>
+    <i class="icon ion-chevron-left header_left"></i>
+    <h1 class="title">KCASH</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="text-center cent">
+        <img src="../imgSmall/1.png">
+        <div><span>0.0000</span>KCASH</div>
+    </div>
+    <div class="btn">
+        <button class="button icon-left  button-energized ion-arrow-up-a btn1">转账</button>
+        <button class="button icon-left  button-dark ion-arrow-down-a btn2">收款</button>
+    </div>
+    <div class="detail">交易记录</div>
+</ion-content>
+<script>
+    var app = angular.module('myApp', ['ionic']);
+</script>
+</body>
+</html>
