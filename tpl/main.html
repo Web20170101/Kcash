@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="kcashApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
+    <title>首页</title>
+    <script src="../js/ionic.bundle.js"></script>
+</head>
+<body>
+
+<ion-side-menus>
+    <ion-side-menu-content>
+        <ion-header-bar class="bar-dark">
+            <button class="button icon ion-navicon" menu-toggle="left"></button>
+            <h1 class="title">总资产(BRL) <span>100.00</span></h1>
+
+        </ion-header-bar>
+        <!--各种币资产列表-->
+        <ion-content>
+            <div class="list">
+                <a class="item item-avatar" href="#">
+                    <img src="../imgSmall/1.png">
+                    <span>KCASH</span>
+                    <span class="price">0.0000</span>
+                </a>
+                <a class="item item-avatar" href="#">
+                    <img src="../imgSmall/2.png">
+                    <span>BTC</>
+                    <span class="price">0.0000</span>
+                </a>
+                <a class="item item-avatar" href="#">
+                    <img src="../imgSmall/3.png">
+                    <span>ETH</>
+                    <span class="price">0.0000</span>
+                </a>
+                <a class="item item-avatar" href="#">
+                    <img src="../imgSmall/4.png">
+                    <span>BCH</>
+                    <span class="price">0.0000</span>
+                </a>
+                <a class="item item-avatar" href="#">
+                    <img src="../imgSmall/5.png">
+                    <span>LTC</>
+                    <span class="price">0.0000</span>
+                </a>
+            </div>
+            <div class="addAsset"><i class="icon ion-plus-circled"></i>添加资产</div>
+        </ion-content>
+    </ion-side-menu-content>
+    <!-- 左边打开的侧边栏菜单-->
+    <ion-side-menu side="left">
+        <button menu-close class="button icon ion-close"></button>
+        <div class="list">
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-settings"></i>
+                钱包工具
+            </a>
+            <a class="item item-icon-left" href="#">
+                <i class="icon ion-gear-b"></i>
+                系统设置
+            </a>
+        </div>
+    </ion-side-menu>
+</ion-side-menus>
+<script>
+    var app = angular.module('kcashApp', ['ionic']);
+</script>
+</body>
+</html>
