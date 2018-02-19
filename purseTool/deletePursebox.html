@@ -1,22 +1,30 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
     <title>删除钱包</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
-<div class="header">删除钱包</div>
-<div class="container">
+<ion-header-bar class="purseTool">
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">删除钱包</h1>
+</ion-header-bar>
+<ion-content>
     <div>请输入备份的钱包助记词(12个英文单词)按空格分隔</div>
-    <form action="">
-        <textarea name="" id="" cols="30" rows="10" placeholder="请输入备份的钱包助记词"></textarea>
-        <button>立即验证</button>
-    </form>
-</div>
+    <!--<textarea name="" id="" cols="30" rows="10" placeholder="请输入备份的钱包助记词"></textarea>-->
+    <label class="item item-input">
+        <textarea rows="10" placeholder="请输入备份的钱包助记词"></textarea>
+    </label>
+    <button class="button button-block button-dark">立即验证</button>
+</ion-content>
 <!--助记词不正确，请先备份钱包助记词，弹式框提示-->
-<div>
-    <p>助记词不正确，请先备份钱包助记词</p>
-    <button>确认</button>
-</div>
+<script>
+    var app = angular.module('myApp',['ionic']);
+</script>
 </body>
 </html>

@@ -451,7 +451,7 @@ var $$rAFSchedulerFactory = ['$$rAF', function($$rAF) {
  *
  * @example
  * <example module="ngAnimateChildren" name="ngAnimateChildren" deps="angular-animate.js" animations="true">
-     <file name="index.html">
+     <file name="main.html">
        <div ng-controller="mainController as main">
          <label>Show container? <input type="checkbox" ng-model="main.enterElement" /></label>
          <label>Animate children? <input type="checkbox" ng-model="main.animateChildren" /></label>
@@ -3266,7 +3266,7 @@ var $$AnimationProvider = ['$animateProvider', function($animateProvider) {
  * <example name="ngAnimateSwap-directive" module="ngAnimateSwapExample"
  *          deps="angular-animate.js"
  *          animations="true" fixBase="true">
- *   <file name="index.html">
+ *   <file name="main.html">
  *     <div class="container" ng-controller="AppCtrl">
  *       <div ng-animate-swap="number" class="cell swap-animation" ng-class="colorClass(number)">
  *         {{ number }}
@@ -3809,11 +3809,11 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
  * Say for example we have the following template code:
  *
  * ```html
- * <!-- index.html -->
+ * <!-- main.html -->
  * <div ng-view class="view-animation">
  * </div>
  *
- * <!-- home.html -->
+ * <!-- main.html -->
  * <a href="#/banner-page">
  *   <img src="./banner.jpg" class="banner" ng-animate-ref="banner">
  * </a>
@@ -3901,7 +3901,7 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
            id="anchoringExample"
            deps="angular-animate.js;angular-route.js"
            animations="true">
-    <file name="index.html">
+    <file name="main.html">
       <a href="#/">Home</a>
       <hr />
       <div class="view-container">
@@ -3912,7 +3912,7 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
       angular.module('anchoringExample', ['ngAnimate', 'ngRoute'])
         .config(['$routeProvider', function($routeProvider) {
           $routeProvider.when('/', {
-            templateUrl: 'home.html',
+            templateUrl: 'main.html',
             controller: 'HomeController as home'
           });
           $routeProvider.when('/profile/:id', {
@@ -3945,7 +3945,7 @@ var ngAnimateSwapDirective = ['$animate', '$rootScope', function($animate, $root
           this.id = record.id;
         }]);
     </file>
-    <file name="home.html">
+    <file name="main.html">
       <h2>Welcome to the home page</h1>
       <p>Please click on an element</p>
       <a class="record"

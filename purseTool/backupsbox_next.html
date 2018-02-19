@@ -1,19 +1,28 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
     <title>钱包备份</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
-<div class="header">钱包备份</div>
-<div class="container">
-    <div class="content">
-        <h4>请记下你的钱包助记词并保存到安全的地方</h4>
-        <p>钱包助记词用于恢复钱包资产，拥有助记词即可完全控制钱包资产，请务必妥善保管，丢失助记词即丢失钱包资产。
-            Kcash不存储用户助记词，无法提供找回功能。</p>
-    </div>
-    <div>助记词</div>
-    <button>下一步</button>
-</div>
+<ion-header-bar class="purseTool">
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">钱包备份</h1>
+</ion-header-bar>
+<ion-content>
+    <h5>请记下你的钱包助记词并保存到安全的地方</h5>
+    <p>钱包助记词用于恢复钱包资产，拥有助记词即可完全控制钱包资产，请务必妥善保管，丢失助记词即丢失钱包资产。
+        Kcash不存储用户助记词，无法提供找回功能。</p>
+    <div class="content-box">legal toe educate upgrade normal tile wear olympic weasel tragic property away</div>
+    <button class="button button-block button-dark">下一步</button>
+</ion-content>>
+<script>
+    var app = angular.module('myApp',['ionic']);
+</script>
 </body>
 </html>

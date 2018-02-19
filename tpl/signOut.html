@@ -1,22 +1,26 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>退出登录</title>
-</head>
-<body>
-<div class="header">账户管理</div>
-<div class="content">
-    <div>账号 <p class="id">1881234578</p></div>
-    <div>昵称 <p class="name">钱包&gt;</p></div>
-    <button>退出账号</button>
-    <div>退出账号不会影响本地钱包的资产存储、转账收款等去中心化服务，只会不能使用红包等去中心化功能。</div>
-</div>
-<!--点击退出账号弹出提示信息-->
-<div class="signOut">
-    <div>退出账号不会影响本地钱包的资产存储、转账收款等去中心化服务，只会不能使用红包等去中心化功能。</div>
-    <button>退出账号</button>
-    <button>取消</button>
-</div>
-</body>
-</html>
+<!--<div ng-include="'tpl/include/header.html'"></div>-->
+<ion-header-bar>
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">账户管理</h1>
+</ion-header-bar>
+
+<ion-content>
+    <div class="list">
+        <div class="item">账号 <span class="item-note">18813145200</span></div>
+        <a href="#" class="item">昵称<span class="item-note">钱包&gt;</span></a>
+    </div>
+    <button class="button button-block button-dark" ng-click="modal.show()">
+        退出登录
+    </button>
+    <p>退出账号不会影响本地钱包的资产存储、转账收款等去中心化服务，只会不能使用红包等去中心化功能。</p>
+</ion-content>
+<!--模态框-->
+<script id="templates/mymodal.html" type="text/ng-template">
+    <!--点击退出账号弹出提示信息-->
+    <div class="modal-box slide-in-up ng-enter active ng-enter-active" style="min-height: 25%;bottom:0">
+        <div>退出账号不会影响本地钱包的资产存储、转账收款等去中心化服务，只会不能使用红包等去中心化功能。</div>
+        <button class="button button-block button-stable">退出账号</button>
+        <button class="button button-block button-light">取消</button>
+    </div>
+</script>
+

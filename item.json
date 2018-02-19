@@ -1,8 +1,30 @@
 [
     {
-        "name":"菜鸟教程"
+        "fid":1,
+        "img_sm": "1.png",
+        "fname": "比特币",
+        "price": "10000",
+        "fshortname": "BTC"
     },
     {
-        "name":"www.runoob.com"
+        "fid":2,
+        "img_sm": "2.png",
+        "fname": "比特币",
+        "price": "30000",
+        "fshortname": "HTC"
+    },
+    {
+        "fid":3,
+        "img_sm": "3.png",
+        "fname": "比特币",
+        "price": "20000",
+        "fshortname": "TBC"
+    },
+    {
+        "fid":4,
+        "img_sm": "4.png",
+        "fname": "比特币",
+        "price": "30000",
+        "fshortname": "HFC"
     }
 ]

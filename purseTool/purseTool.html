@@ -1,15 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-<div class="purseTool">钱包工具</div>
-<div class="content">
-    <div class="backups">钱包备份</div>
-    <div class="exportKey">导出密钥</div>
-    <div class="deletePurse">删除钱包</div>
-</div>
-</body>
-</html>
+<!--<!DOCTYPE html>-->
+<!--<html ng-app="myApp">-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>-->
+    <!--<link rel="stylesheet" href="../css/ionic.css"/>-->
+    <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>-->
+    <!--<link rel="stylesheet" href="../css/kcash.css"/>-->
+    <!--<title>钱包工具</title>-->
+    <!--<script src="../js/ionic.bundle.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+<ion-header-bar class="purseTool">
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">钱包工具</h1>
+</ion-header-bar>
+<ion-content>
+    <!--<div class="backups">钱包备份</div>-->
+    <!--<div class="exportKey">导出密钥</div>-->
+    <!--<div class="deletePurse">删除钱包</div>-->
+    <div class="list">
+        <a class="item item-icon-left" href="#" >
+            <i class="icon ion-iphone"></i>
+            钱包备份
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-key"></i>
+            导出密钥
+        </a>
+        <a class="item item-icon-left" href="#">
+            <i class="icon ion-ios-trash-outline"></i>
+            删除钱包
+        </a>
+    </div>
+</ion-content>>
+<!--<script>-->
+    <!--var app = angular.module('myApp',['ionic']);-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
