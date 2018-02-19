@@ -48,7 +48,7 @@
             $scope.login = function () {
                 $http({
                     method:'post',
-                    url:'http://47.75.5.78:8081/user/login',
+                    url:url+'/user/login',
                     data:{floginName:$scope.floginName,floginPassword:$scope.floginPassword},
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                     transformRequest: function (obj) {

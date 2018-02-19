@@ -1,12 +1,12 @@
 /**
  * Created by Qing on 2018/1/28.
  */
+var url = 'http://47.75.5.78:8081';
 var app = angular.module('kcash',['ionic']);
 /**
  * 配置状态
  */
 app.config(function ($stateProvider, $urlRouterProvider) {
-    //$ionicConfigProvider.tabs.position("bottom");
     $stateProvider
         .state('start',{
             url:'/myStart',
@@ -88,14 +88,6 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             $window.history.back();
             console.log("返回");
         };
-        //data字符串拼接
-        $scope.transformRequest = function (obj) {
-            var str = [];
-            for (var p in obj) {
-                str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-            }
-            return str.join("&");
-        }
         //判断当前用户是否登录
         //$rootScope.isLogin = false;
 
@@ -114,11 +106,15 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             },1000);
     }])
     .controller('mainCtrl',['$scope','$timeout' ,'$http', function ($scope,$timeout,$http) {
-        $http.get('item.json')
-            .success(function (data) {
-                console.log(data);
-                $scope.walletList = data;
-            })
+        $http({
+            method:'post',
+            url:url+'/virtualCoin/getCoinType',
+            data:{},
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            transformRequest: function (obj) {
+                return transformRequest(obj);
+            }
+        })
         $scope.doRefresh = function() {
             $http.get('item.json')   //注意改为自己本站的地址，不然会有跨域问题
                 .success(function(newWallet) {
@@ -148,7 +144,7 @@ app.controller('registerCtrl',
         $scope.verification = function () {
             $http({
                 method: 'post',
-                url: 'http://47.75.5.78:8081/user/authCode',
+                url: url+'/user/authCode',
                 data: {phone:$scope.phone},
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 transformRequest: function (obj) {
@@ -168,7 +164,6 @@ app.controller('registerCtrl',
         }
         //注册
 
-        console.log($scope.floginName);
         $scope.register = function () {
             $http({
                 method:'post',
@@ -197,34 +192,19 @@ app.controller('registerCtrl',
                 data:{floginName:$scope.floginName,floginPassword:$scope.floginPassword},
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 transformRequest: function (obj) {
-                    var str = [];
-                    for (var p in obj) {
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    }
-                    return str.join("&");
+                    return transformRequest(obj);
                 }
             })
                 .success(function (result) {
                     if(result.status == 200){
                         setCookie('user_token',result.data,7);
+                        console.log('succ')
+                    }else{
+                        checkRequestStatus(result);
                     }
-                    console.log(result);
                 })
         }
 
-        //$scope.login = function() {
-        //    $http.get('user.json' + $scope.phone + '&upwd=' + $scope.pwd)
-        //        .success(
-        //            function (result) {
-        //                $rootScope.user= result;
-        //                if(result.code==1){
-        //                    $scope.$parent.jump('main');
-        //                }
-        //                else
-        //                    $scope.error = "用户名或密码不正确";
-        //            }
-        //    );
-        //}
     }])
     .controller('setSystemCtrl',['$scope', function ($scope) {
 
@@ -243,7 +223,7 @@ app.controller('registerCtrl',
 
     }]);
     //模态框
-
+//Cookie存储token
 function getCookie(c_name){
     if (document.cookie.length>0){
         var c_start=document.cookie.indexOf(c_name + "=");
@@ -263,4 +243,19 @@ function setCookie(c_name,value,expiredays){
     var exdate=new Date();
     exdate.setDate(exdate.getDate()+expiredays);
     document.cookie=c_name+ "=" +value+((expiredays==null) ? "" : "; expires="+exdate.toGMTString())
+}
+function checkRequestStatus(result){
+    if(result.status == 403){
+        alert(result.msg);
+    }else if(result.status == 401){
+        //token无效，需要跳转到登录
+    }
+}
+//拼接
+function transformRequest(obj){
+    var str = [];
+    for (var p in obj) {
+        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+    }
+    return str.join("&");
 }
