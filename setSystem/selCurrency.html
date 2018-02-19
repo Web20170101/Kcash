@@ -1,24 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
     <title>选择货币</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
-<div class="header">选择货币
-    <button>保存</button>
-</div>
-<ul>
-    <li>AUD</li>
-    <li>BRL</li>
-    <li>CAD</li>
-    <li>CHF</li>
-    <li>CNY</li>
-    <li>CZK</li>
-    <li>DKK</li>
-    <li>EUR</li>
-    <li>GBP</li>
-    <li>HKD</li>
-</ul>
+<ion-header-bar class="purseTool">
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">选择货币</h1>
+</ion-header-bar>
+<ion-content>
+    <ion-list>
+        <ion-radio ng-model="choice" ng-value="'A'">AUD</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'B'">BRL</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'C'">CAD</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'D'">CHF</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'E'">CNY</ion-radio>
+        <ion-radio ng-model="choice" ng-value="'F'">CZK</ion-radio>
+    </ion-list>
+</ion-content>
+<script>
+    var app = angular.module('myApp',['ionic']);
+</script>
 </body>
 </html>

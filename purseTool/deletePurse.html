@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
     <title>删除钱包</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
-<div class="header">删除钱包</div>
-<div class="container">
-    <div class="text">
-        <p>注意!</p><div>删除钱包之前，请务必确认已备份好钱包助记词，否则将丢弃你的钱包资产。</div>
-    </div>
-    <form action="">
-        <button>知道了，继续</button>
-    </form>
-</div>
+<ion-header-bar class="purseTool">
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">删除钱包</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="warn"><span>注意!</span>删除钱包之前，请务必确认已备份好钱包助记词，否则将丢弃你的钱包资产。</div>
+    <button class="button button-block button-dark">知道了，继续</button>
+</ion-content>>
+<script>
+    var app = angular.module('myApp',['ionic']);
+</script>
 </body>
 </html>

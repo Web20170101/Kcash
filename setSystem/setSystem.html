@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html ng-app="myApp">
-<head lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
-    <link rel="stylesheet" href="../css/ionic.css"/>
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
-    <link rel="stylesheet" href="../css/kcash.css"/>
-    <title>系统设置</title>
-    <script src="../js/ionic.bundle.js"></script>
-</head>
-<body>
+<!--<!DOCTYPE html>-->
+<!--<html ng-app="myApp">-->
+<!--<head lang="en">-->
+    <!--<meta charset="UTF-8">-->
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>-->
+    <!--<link rel="stylesheet" href="../css/ionic.css"/>-->
+    <!--<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>-->
+    <!--<link rel="stylesheet" href="../css/kcash.css"/>-->
+    <!--<title>系统设置</title>-->
+    <!--<script src="../js/ionic.bundle.js"></script>-->
+<!--</head>-->
+<!--<body>-->
 <!--<div class="header">菜单-->
 <!--<p class="user">用户头像</p>-->
 <!--</div>-->
 <ion-header-bar>
-    <i class="icon ion-chevron-left header_left"></i>
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
     <h1 class="title">系统设置</h1>
     <a class="button ion-android-contact"></a>
 </ion-header-bar>
@@ -23,21 +23,21 @@
     <!--<div>系统设置</div>-->
     <div class="list">
         <a class="item item-icon-left" href="#">
-            <i class="icon ion-settings"></i>
+            <i class="icon ion-ios-locked-outline"></i>
             修改密码
         </a>
         <a class="item item-icon-left" href="#">
-            <i class="icon ion-gear-b"></i>
+            <i class="icon ion-ios-world-outline"></i>
             选择语言
         </a>
         <a class="item item-icon-left" href="#">
-            <i class="icon ion-gear-b"></i>
+            <i class="icon ion-social-usd-outline"></i>
             选择货币
         </a>
     </div>
 </ion-content>
-<script>
-    var app = angular.module('myApp', ['ionic']);
-</script>
-</body>
-</html>
+<!--<script>-->
+    <!--var app = angular.module('myApp', ['ionic']);-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->

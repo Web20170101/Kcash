@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>验证助记词</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
+    <title>钱包备份</title>
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
-<div class="header">钱包备份</div>
-<div class="container">
-    <div class="content">
-        <h4>验证你的钱包助记词</h4>
-        <p>请根据你记下的助记词，按照顺序点击，验证你备份的助记词正确无误。</p>
-        <!--选择正确的助记词显示-->
-        <div>
-            <p>olympic</p>
-            <p>olympic</p>
-            <p>olympic</p>
-        </div>
+<ion-header-bar class="purseTool">
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">钱包备份</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="warn">
+        <p>验证你的钱包助记词</p>
+        请根据你记下的助记词，按照顺序点击，验证你备份的助记词正确无误。</div>
+    <!--将被选入的助记词-->
+    <div class="content-box">
     </div>
-    <!--无序的助记词-->
+    <!--候选助记词-->
     <div>
         <p>olympic</p>
         <p>olympic</p>
         <p>olympic</p>
     </div>
-    <button>确定</button>
-</div>
-<!--验证失败提示-->
-<div>助记词验证失败,请检查备份</div>
+    <button class="button button-block button-dark">立即备份</button>
+    <div>助记词验证失败，请检查备份</div>
+</ion-content>>
+<script>
+    var app = angular.module('myApp',['ionic']);
+</script>
 </body>
 </html>

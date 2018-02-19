@@ -1,18 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>导出密钥列表</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="../css/ionic.css"/>
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+    <link rel="stylesheet" href="../css/kcash.css"/>
+    <link rel="stylesheet" href="../css/inputPwd.css"/>
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script src="../js/inputPassword.js"></script>
+    <title>导出私钥列表</title>
+
+    <script src="../js/ionic.bundle.js"></script>
 </head>
 <body>
-<div class="header">导出密钥</div>
-<ul>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-    <li>BTC密钥</li>
-</ul>
+<ion-header-bar class="purseTool">
+    <i class="icon ion-chevron-left header_left" ng-click="backWard()"></i>
+    <h1 class="title">导出私钥</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="list">
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/1.png">
+            <h2>BTC密钥</h2>
+            <!--<i class="icon ion-chevron-right"></i>-->
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/2.png">
+            <h2>ETH密钥</h2>
+            <!--<i class="icon ion-chevron-right"></i>-->
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/3.png">
+            <h2>ACT密钥</h2>
+            <!--<i class="icon ion-chevron-right"></i>-->
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/4.png">
+            <h2>LTC密钥</h2>
+            <!--<i class="icon ion-chevron-right"></i>-->
+        </a>
+        <a class="item item-avatar" href="#">
+            <img src="../imgSmall/5.png">
+            <h2>ETC密钥</h2>
+            <!--<i class="icon ion-chevron-right"></i>-->
+        </a>
+    </div>
+</ion-content>
+<!--助记词不正确，请先备份钱包助记词，弹式框提示-->
+<script>
+    var app = angular.module('myApp',['ionic']);
+</script>
 </body>
 </html>
