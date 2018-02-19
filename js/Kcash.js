@@ -193,11 +193,23 @@ app.controller('registerCtrl',
         $scope.login = function () {
             $http({
                 method:'post',
-                url:'http://47.75.5.78:8081/user/changePassword',
-                data:{},
+                url:'http://47.75.5.78:8081/user/login',
+                data:{floginName:$scope.floginName,floginPassword:$scope.floginPassword},
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj) {
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    }
+                    return str.join("&");
+                }
             })
+                .success(function (result) {
+                    if(result.status == 200){
+                        setCookie('user_token',result.data,7);
+                    }
+                    console.log(result);
+                })
         }
 
         //$scope.login = function() {
@@ -232,4 +244,23 @@ app.controller('registerCtrl',
     }]);
     //模态框
 
-
+function getCookie(c_name){
+    if (document.cookie.length>0){
+        var c_start=document.cookie.indexOf(c_name + "=");
+        if (c_start!=-1){
+            c_start=c_start + c_name.length+1;
+            var c_end=document.cookie.indexOf(";",c_start);
+            if (c_end==-1) {
+                c_end=document.cookie.length;
+            }
+            console.log(document.cookie.substring(c_start,c_end));
+            return document.cookie.substring(c_start,c_end);
+        }
+    }
+    return "";
+}
+function setCookie(c_name,value,expiredays){
+    var exdate=new Date();
+    exdate.setDate(exdate.getDate()+expiredays);
+    document.cookie=c_name+ "=" +value+((expiredays==null) ? "" : "; expires="+exdate.toGMTString())
+}
