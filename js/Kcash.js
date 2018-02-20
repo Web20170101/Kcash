@@ -52,6 +52,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             url:'/myTransaction/:id',
             templateUrl:'transaction/transaction.html',
             controller:'transactionCtrl'
+        })
+        .state('resetPassword',{
+            url:'myResetPassword',
+            templateUrl:'tpl/resetPassword.html',
+            controller:'resetPasswordCtrl'
         });
         //.state('menu',{
         //    url:'',
@@ -148,11 +153,7 @@ app.controller('registerCtrl',
                 data: {phone:$scope.phone},
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 transformRequest: function (obj) {
-                    var str = [];
-                    for (var p in obj) {
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    }
-                    return str.join("&");
+                    return transformRequest(obj);
                 }
             })
                 .success(function (data) {
@@ -171,11 +172,7 @@ app.controller('registerCtrl',
                 data:{floginName:$scope.phone,floginPassword:$scope.floginPassword,authCode:$scope.authCode},
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'},
                 transformRequest: function (obj) {
-                    var str = [];
-                    for (var p in obj) {
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    }
-                    return str.join("&");
+                    return transformRequest(obj);
                 }
             })
                 .success(function (result) {
@@ -221,8 +218,11 @@ app.controller('registerCtrl',
                 $scope.walletList = data;
             })
 
+    }])
+    controller('changePassword',['$scope','$http', function ($scope, $http) {
+
     }]);
-    //模态框
+
 //Cookie存储token
 function getCookie(c_name){
     if (document.cookie.length>0){

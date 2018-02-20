@@ -1,5 +1,5 @@
 if(window.jQuery===undefined)
-    throw new Error("inputPwd插件依赖于jQuery");
+    throw new Error("inputPwd鎻掍欢渚濊禆浜巎Query");
 jQuery.fn.inputPwd = function () {
     var $input = $(".fake-box input");
     $("#pwd-input").on("input", function() {
@@ -14,7 +14,7 @@ jQuery.fn.inputPwd = function () {
             }
         });
         if (len == 6) {
-            //执行其他操作
+            //鎵ц鍏朵粬鎿嶄綔
         }
     });
 }
